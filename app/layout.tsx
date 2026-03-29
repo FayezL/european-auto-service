@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "European Auto Service - BMW, Mercedes, Audi, Ferrari & More",
-  description: "Professional European car repair and maintenance services. BMW, Mercedes-Benz, Audi, Ferrari, Lamborghini, Jaguar, and more. Book your appointment today.",
+  title: "Automotive - German, Asian, American Car Service",
+  description: "Professional car repair and maintenance services for German, Asian, and American cars. Book your appointment today.",
 };
 
 export default function RootLayout({

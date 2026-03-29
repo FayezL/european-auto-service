@@ -1,11 +1,10 @@
 import { SERVICES } from "@/config/site";
-import { Wrench, Disc, Search, Circle, Battery, Settings, Cog, ArrowUpDown } from "lucide-react";
+import { Wrench, Disc, Search, Battery, Settings, Cog, ArrowUpDown } from "lucide-react";
 
 const iconMap: Record<string, React.ReactNode> = {
   "oil-change": <Wrench className="w-8 h-8" />,
   brakes: <Disc className="w-8 h-8" />,
   diagnostics: <Search className="w-8 h-8" />,
-  tires: <Circle className="w-8 h-8" />,
   battery: <Battery className="w-8 h-8" />,
   transmission: <Cog className="w-8 h-8" />,
   suspension: <ArrowUpDown className="w-8 h-8" />,

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { supabase } from "@/lib/supabase";
-import { CAR_BRANDS, CAR_MODELS, SERVICES } from "@/config/site";
+import { CAR_BRANDS, SERVICES } from "@/config/site";
 import { CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 
 export default function BookingForm() {
@@ -17,8 +17,6 @@ export default function BookingForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
-  const availableModels = formData.car_brand ? CAR_MODELS[formData.car_brand] || [] : [];
-
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) {
@@ -26,7 +24,6 @@ export default function BookingForm() {
     setFormData((prev) => ({
       ...prev,
       [name]: value,
-      ...(name === "car_brand" && { car_model: "" }),
     }));
   }
 
@@ -39,7 +36,7 @@ export default function BookingForm() {
       {
         name: formData.name,
         phone: formData.phone,
-        car_model: `${formData.car_brand} ${formData.car_model}`,
+        car_model: `${formData.car_brand} - ${formData.car_model}`,
         service: formData.service,
         notes: formData.notes || null,
         status: "pending",
@@ -131,7 +128,7 @@ export default function BookingForm() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label htmlFor="car_brand" className="block text-sm font-medium text-gray-700 mb-1">
-              Car Brand *
+              Car Type *
             </label>
             <select
               id="car_brand"
@@ -141,7 +138,7 @@ export default function BookingForm() {
               required
               className="input-field"
             >
-              <option value="">Select brand</option>
+              <option value="">Select type</option>
               {CAR_BRANDS.map((brand) => (
                 <option key={brand} value={brand}>
                   {brand}
@@ -152,24 +149,18 @@ export default function BookingForm() {
 
           <div>
             <label htmlFor="car_model" className="block text-sm font-medium text-gray-700 mb-1">
-              Car Model *
+              Car Make/Model *
             </label>
-            <select
+            <input
+              type="text"
               id="car_model"
               name="car_model"
               value={formData.car_model}
               onChange={handleChange}
               required
-              disabled={!formData.car_brand}
-              className="input-field disabled:bg-gray-100 disabled:cursor-not-allowed"
-            >
-              <option value="">Select model</option>
-              {availableModels.map((model) => (
-                <option key={model} value={model}>
-                  {model}
-                </option>
-              ))}
-            </select>
+              className="input-field"
+              placeholder="e.g. Toyota Camry"
+            />
           </div>
         </div>
 

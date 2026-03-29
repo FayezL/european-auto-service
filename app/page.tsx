@@ -11,7 +11,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center shadow-lg">
-              <span className="text-white font-bold text-xl">E</span>
+              <span className="text-white font-bold text-xl">A</span>
             </div>
             <span className="font-bold text-xl text-gray-900">
               {SITE_CONFIG.name}
@@ -37,19 +37,18 @@ export default function Home() {
         <div className="relative max-w-6xl mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600/20 border border-blue-500/30 rounded-full mb-6">
             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-            <span className="text-blue-200 text-sm font-medium">Professional European Car Specialists</span>
+            <span className="text-blue-200 text-sm font-medium">Professional Auto Specialists</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
             Expert Care for Your<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              European Vehicle
+              Vehicle
             </span>
           </h1>
           
           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-            Specialized maintenance and repair for BMW, Mercedes-Benz, Audi, Ferrari, 
-            Lamborghini, and all European makes.
+            Specialized maintenance and repair for German, Asian, and American cars.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -93,7 +92,7 @@ export default function Home() {
                 <Wrench className="w-7 h-7 text-blue-600" />
               </div>
               <h3 className="font-semibold text-lg text-gray-900 mb-2">Expert Technicians</h3>
-              <p className="text-gray-600">Certified specialists with years of European car experience</p>
+              <p className="text-gray-600">Certified specialists with years of experience</p>
             </div>
             <div className="text-center p-6">
               <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -120,7 +119,7 @@ export default function Home() {
               Our Services
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              From routine maintenance to major repairs, we handle all your European car needs
+              From routine maintenance to major repairs, we handle all your car needs
             </p>
           </div>
           <ServiceList />
@@ -147,12 +146,12 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">E</span>
+                  <span className="text-white font-bold text-xl">A</span>
                 </div>
                 <span className="font-bold text-xl">{SITE_CONFIG.name}</span>
               </div>
               <p className="text-gray-400 leading-relaxed">
-                Professional European car repair and maintenance. 
+                Professional car repair and maintenance. 
                 Trusted by car enthusiasts for quality service.
               </p>
             </div>
