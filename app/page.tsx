@@ -19,13 +19,6 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-4">
             <AvailabilityBadge />
-            <a
-              href={`tel:${SITE_CONFIG.phone}`}
-              className="hidden sm:flex items-center gap-2 text-blue-600 font-medium hover:text-blue-700"
-            >
-              <Phone className="w-4 h-4" />
-              {SITE_CONFIG.phone}
-            </a>
           </div>
         </div>
       </header>
@@ -58,13 +51,7 @@ export default function Home() {
             >
               Book Appointment
             </a>
-            <a
-              href="tel:5551234567"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg border border-white/20 transition-all"
-            >
-              <Phone className="w-5 h-5" />
-              Call Now
-            </a>
+
           </div>
           
           <div className="flex flex-wrap justify-center gap-3">
@@ -159,24 +146,7 @@ export default function Home() {
             <div>
               <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
               <ul className="space-y-4">
-                <li className="flex items-center gap-3 text-gray-400">
-                  <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center">
-                    <Phone className="w-5 h-5 text-blue-400" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-500">Phone</p>
-                    <p className="text-white">{SITE_CONFIG.phone}</p>
-                  </div>
-                </li>
-                <li className="flex items-center gap-3 text-gray-400">
-                  <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-blue-400" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-500">Email</p>
-                    <p className="text-white">{SITE_CONFIG.email}</p>
-                  </div>
-                </li>
+
                 <li className="flex items-center gap-3 text-gray-400">
                   <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center">
                     <MapPin className="w-5 h-5 text-blue-400" />
